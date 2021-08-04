@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> 
+    <title>Comedy Drum!</title>
+    <script>
+            
+    function play(str) { 
+
+         if (str === "q" || str === "Q"){
+            document.getElementById('display').innerText = "Tada";
+          } else if (str === "w" || str === "W") {
+            document.getElementById('display').innerText = "Door-knock";
+          } else if (str === "e" || str === "E") {
+            document.getElementById('display').innerText = "Dog squeaky toy";
+          } else if (str === "a" || str === "A") {
+            document.getElementById('display').innerText = "Cartoon pop-up";
+          } else if (str === "s" || str === "S") {
+            document.getElementById('display').innerText = "Cow mooing";
+          } else if (str === "d" || str === "D") {
+            document.getElementById('display').innerText = "Cartoon eye blink";
+          } else if (str === "z" || str === "Z") {
+            document.getElementById('display').innerText = "Ahooga";
+          } else if (str === "x" || str === "X") {
+            document.getElementById('display').innerText = "Boing sound";
+          } else if (str === "c" || str === "C") {
+            document.getElementById('display').innerText = "Boo";
+          } 
+        
+        
+        var audio = document.getElementById(str);
+        audio.play();
+        
+        window.document.onkeyup = function(event) {
+        let keystroke = event.key
+        if (keystroke === "q" || keystroke === "Q"){
+            play("Q");
+          } else if (keystroke === "w" || keystroke === "W") {
+            play("W");
+          } else if (keystroke === "e" || keystroke === "E") {
+            play("E");
+          } else if (keystroke === "a" || keystroke === "A") {
+            play("A");
+          } else if (keystroke === "s" || keystroke === "S") {
+            play("S");
+          } else if (keystroke === "d" || keystroke === "D") {
+            play("D");
+          } else if (keystroke === "z" || keystroke === "Z") {
+            play("Z");
+          } else if (keystroke === "x" || keystroke === "X") {
+            play("X");
+          } else if (keystroke === "c" || keystroke === "C") {
+            play("C");
+          } 
+
+        }
+      
+    }
+    </script>
+  </head>
+  <body>
+    <h1>Comedy Drum!</h1>
+  <div class="container" id="drum-machine">
+    <div class="card my-3">
+    <div class="card-body">
+      <div class="text-center" id="display">Comedy Drum</div>
+    </div>
+  </div>
+      <button class="drum-pad btn btn-primary btn-block" id="drum-0" onclick="play('Q')">
+          Q
+          <audio src="./clip/Tada-sound.mp3" class="clip" id="Q"></audio>
+        </button>
+      <button class="drum-pad btn btn-primary btn-block" id="drum-1" onclick="play('W')">
+          W
+          <audio src="./clip/Door-knock-sound-effect.mp3" class="clip" id="W"></audio>
+        </button>
+      <button class="drum-pad btn btn-primary btn-block" id="drum-2" onclick="play('E')">
+        E
+      <audio src="./clip/dog-squeaky-toy-sound.mp3" class="clip" id="E"></audio>
+    </button>
+      <button class="drum-pad btn btn-primary btn-block" id="drum-3" onclick="play('A')">
+          A
+          <audio src="./clip/cartoon-pop-up-sound-effect.mp3" class="clip" id="A"></audio>
+        </button>
+      <button class="drum-pad btn btn-primary btn-block" id="drum-4" onclick="play('S')">
+        S
+      <audio src="./clip/Cow-moo-sound.mp3" class="clip" id="S"></audio>
+    </button>
+      <button class="drum-pad btn btn-primary btn-block" id="drum-5" onclick="play('D')">
+          D
+          <audio src="./clip/Cartoon-eye-blink-sound-effect-free-download.mp3" class="clip" id="D"></audio>
+        </button>
+      <button class="drum-pad btn btn-primary btn-block" id="drum-6" onclick="play('Z')"> 
+          Z
+          <audio src="./clip/ahooga-horn.mp3" class="clip" id="Z"></audio>
+        </button>
+      <button class="drum-pad btn btn-primary btn-block" id="drum-7" onclick="play('X')">
+          X
+          <audio src="./clip/boing-sound-effect.mp3" class="clip" id="X"></audio>
+        </button>
+      <button class="drum-pad btn btn-primary btn-block" id="drum-8" onclick="play('C')">
+          C
+      <audio src="./clip/Boo-sound.mp3" class="clip" id="C"></audio>
+    </button>
+  </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>
